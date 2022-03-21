@@ -1,0 +1,21 @@
+<h1>Edit <%= @host.first_name%> <%= @host.last_name%> <%= @host.email%></h1>
+<form action="/hosts/<%= @host.id%>" method="post">
+	<div>
+		<label>First Name:</label>
+		<input type="text" name="host[first_name]" value="<%= @host.first_name%>">
+	</div>
+	<div>
+		<label>Last Name:</label>
+		<input type="text" name="host[last_name]" value="<%= @host.last_name%>">
+	</div>
+	<div>
+		<label>Email:</label>
+		<input type="text" name="host[email_address]" value="<%= @host.email_address%>">
+	</div>
+	<input type="submit" value="Update">
+</form>
+<% if flash[:errors] %>
+	<% flash[:errors].each do |e| %>
+	<div><%= e %></div>
+	<% end %>
+<% end %>
