@@ -26,7 +26,7 @@ class HostsController < ApplicationController
 		if host.save
 			# if the save method succeeds, request the hosts URL
 			# which will rendor the host index.html.erb in the browser
-			redirect_to "/hosts"
+			redirect_to "/host"
 		else
 			# get full message associated with errors
 			# store them in a Rails flash object names errirs so that 
