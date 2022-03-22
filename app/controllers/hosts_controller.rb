@@ -7,7 +7,7 @@ class HostsController < ApplicationController
 		# and returns the data as an array of objects.
 		# store the array of objects in an instance variable.
 		# instance varialbe is avaliable to actors index.html.erb.
-		@hosts = Host.all
+		@host = Host.all
 	end
 
 
@@ -19,7 +19,7 @@ class HostsController < ApplicationController
 		# new.html.erb
 		# constructo create Host model object which is stored
 		# in variable
-		host = Host.new(host_params)
+		hosts = Host.new(host_params)
 		# call save method on Host object
 		# save method inserts the data in the Host model object
 		# into the host table
@@ -90,7 +90,7 @@ end
 		# the selected data will be returned as an object
 		# the object will be stored in a instance variable that will be
 		# available to the delete.html.erb
-		@host = Host.find(params[:id])
+		@hosts = Host.find(params[:id])
 	end
 
 	# destroy method gets called when the Delete button is pushed on the 
