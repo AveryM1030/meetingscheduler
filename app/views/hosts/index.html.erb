@@ -1,15 +1,13 @@
 <h1>View <%= pluralize(@hosts.count, "Host") %></h1>
 <table class="table table-striped">
 	<thead>
-		<th scope="col">First Name</th>
-		<th scope="col">Last Name</th>
+		<th scope="col">FullName</th>
 		<th scope="col">Email</th>
 	</thead>
 	<tbody>
 		<% @hosts.each do |host| %>
 		<tr>
-			<td><%= host.first_name %></td>
-			<td><%= host.last_name %></td>
+			<td><%= host.fullname %></td>
 			<td><%= host.email %></td>
 			<td>
 				<a href="/hosts/<%= host.id %>/edit">Edit</a> |

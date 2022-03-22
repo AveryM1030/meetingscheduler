@@ -7,7 +7,7 @@ class HostsController < ApplicationController
 		# and returns the data as an array of objects.
 		# store the array of objects in an instance variable.
 		# instance varialbe is avaliable to actors index.html.erb.
-		@host = Host.all
+		@hosts = Host.all
 	end
 
 
