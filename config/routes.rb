@@ -7,16 +7,16 @@ Rails.application.routes.draw do
 # Rails automatically maps the index method to a web page view named
 # index.html.erb and serves the web page to the browser where its
 # rendered.
-get "host" => "host#index"
-get "host/new" => "host#new"
+get "hosts" => "hosts#index"
+get "hosts/new" => "hosts#new"
 # When a post request is made for the hosts URL,
 # Rails envokes the create method in the hosts Ruby controller class
-post "host" => "host#create"
-get "host/:id/edit" => "host#edit"
+post "hosts" => "hosts#create"
+get "hosts/:id/edit" => "hosts#edit"
 post "hosts/:id" => "hosts#update"
-get "hosts/:id/delete" => "host#delete"
-delete "host/:id" => "host#destroy"
- get "meettings" => "meetings#index"
+get "hosts/:id/delete" => "hosts#delete"
+delete "hosts/:id" => "hosts#destroy"
+ get "meetings" => "meetings#index"
  get "meetings/new" => "meetings#new"
  post "meetings" => "meetings#create"
 end

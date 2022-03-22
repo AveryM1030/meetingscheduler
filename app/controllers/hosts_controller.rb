@@ -7,7 +7,7 @@ class HostsController < ApplicationController
 		# and returns the data as an array of objects.
 		# store the array of objects in an instance variable.
 		# instance varialbe is avaliable to actors index.html.erb.
-		@host = Host.all
+		@hosts = Host.all
 	end
 
 
@@ -26,7 +26,7 @@ class HostsController < ApplicationController
 		if host.save
 			# if the save method succeeds, request the hosts URL
 			# which will rendor the host index.html.erb in the browser
-			redirect_to "/host"
+			redirect_to "/hosts"
 		else
 			# get full message associated with errors
 			# store them in a Rails flash object names errirs so that 
@@ -34,7 +34,7 @@ class HostsController < ApplicationController
 			flash[:errors] = host.errors.full_messages
 			# if the save method fails, request the hosts/new URL
 			# which will rendor the hosts new.html.erb in the browser
-			redirect_to "/host/new"
+			redirect_to "/hosts/new"
 	end
 end
 
@@ -48,7 +48,7 @@ end
 		# the selected data will be returned as an object
 		# the object will be stored in a instance variable that will be
 		# available to the edit.html.erb
-		@host = Host.find(params[:id])
+		@hosts = Host.find(params[:id])
 	end
 
 	# update method gets called when the Update button is pushed on the 
@@ -67,7 +67,7 @@ end
 		if host.update(host_params)
 			# if the update method succeeds, request the host URL which
 			# will render the hosts index.html.erb in the broswer
-			redirect_to "/host"
+			redirect_to "/hosts"
 		else
 			# if the update method fails, get the full messages associated
 			# with the errors
@@ -76,7 +76,7 @@ end
 			flash[:errors] = host.errors.full_messages
 			# request the hosts/:id/edit URl which will render the hosts
 			# edit.html.erb
-			redirect_to "/host/#{host.id}/edit"
+			redirect_to "/hosts/#{host.id}/edit"
 		end
 	end
 
@@ -98,7 +98,7 @@ end
 	def destroy
 		host = Host.find(params[:id])
 		host.destroy
-		redirect_to "/host"
+		redirect_to "/hosts"
 	end
 
 	private
