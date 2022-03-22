@@ -8,14 +8,14 @@ Rails.application.routes.draw do
 # index.html.erb and serves the web page to the browser where its
 # rendered.
 get "host" => "host#index"
-get "hosts/new" => "hosts#new"
+get "host/new" => "host#new"
 # When a post request is made for the hosts URL,
 # Rails envokes the create method in the hosts Ruby controller class
-post "hosts" => "hosts#create"
-get "hosts/:id/edit" => "hosts#edit"
+post "host" => "host#create"
+get "host/:id/edit" => "host#edit"
 post "hosts/:id" => "hosts#update"
-get "hosts/:id/delete" => "hosts#delete"
-delete "hosts/:id" => "hosts#destroy"
+get "hosts/:id/delete" => "host#delete"
+delete "host/:id" => "host#destroy"
  get "meettings" => "meetings#index"
  get "meetings/new" => "meetings#new"
  post "meetings" => "meetings#create"
