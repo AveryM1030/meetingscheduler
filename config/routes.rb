@@ -16,4 +16,7 @@ get "hosts/:id/edit" => "hosts#edit"
 post "hosts/:id" => "hosts#update"
 get "hosts/:id/delete" => "hosts#delete"
 delete "hosts/:id" => "hosts#destroy"
+ get "meettings" => "meetings#index"
+ get "meetings/new" => "meetings#new"
+ post "meetings" => "meetings#create"
 end
