@@ -1,0 +1,22 @@
+<h1>View <%= pluralize(@meetings.count, "Meeting") %></h1>
+<table class="table table-striped">
+	<thead>
+		<th scope="col">Meeting's Name</th>
+		<th scope="col">Meeting's Location</th>
+		<th scope="col">Meeting's Date</th>
+	</thead>
+	<tbody>
+		<% @meetings.each do |meeting| %>
+		<tr>
+			<td><%= meeting.name %></td>
+			<td><%= meeting.location %></td>
+			<td><%= meeting.date %></td>
+			<td>
+				<a href="/meetings/<%= meeting.id %>/edit">Edit</a> |
+				<a href="/meetings/<%= meeting.id %>/delete">Delete</a>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<a href="/meetings/new">Create Meeting</a>

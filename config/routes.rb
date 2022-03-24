@@ -19,4 +19,5 @@ delete "hosts/:id" => "hosts#destroy"
  get "meetings" => "meetings#index"
  get "meetings/new" => "meetings#new"
  post "meetings" => "meetings#create"
+ get "meetings/edit" => "meetings#edit"
 end
