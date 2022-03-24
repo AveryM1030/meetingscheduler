@@ -23,7 +23,7 @@ class HostsController < ApplicationController
 		# call save method on Host object
 		# save method inserts the data in the Host model object
 		# into the host table
-		if host.save
+		if hosts.save
 			# if the save method succeeds, request the hosts URL
 			# which will rendor the host index.html.erb in the browser
 			redirect_to "/hosts"
@@ -105,7 +105,7 @@ end
 	def host_params
 		# params is a Rails onject that gets the specified request
 		# paramters
-		params.require(:host).permit(:first_name, :last_name, :email_address)
+		params.require(:host).permit(:fullname, :email)
 	end
 end
 
