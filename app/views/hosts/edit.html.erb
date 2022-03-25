@@ -1,12 +1,12 @@
 <h1>Edit <%= @hosts.fullname%> <%= @hosts.email%></h1>
-<form action="/hosts/<%= @host.id%>" method="post">
+<form action="/hosts/<%= @hosts.id%>" method="post">
 	<div>
 		<label>FullName:</label>
-		<input type="text" name="host[fullname]" value="<%= @host.fullname%>">
+		<input type="text" name="host[fullname]" value="<%= @hosts.fullname%>">
 	</div>
 	<div>
 		<label>Email:</label>
-		<input type="text" name="host[email]" value="<%= @host.email%>">
+		<input type="text" name="host[email]" value="<%= @hosts.email%>">
 	</div>
 	<input type="submit" value="Update">
 </form>
