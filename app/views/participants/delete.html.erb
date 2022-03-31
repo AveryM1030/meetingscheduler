@@ -1,0 +1,13 @@
+<h1>Delete <%= @participants.fullname %></h1>
+<form action="/participants/<%= @participants.id %>" method="post">
+	<input type="hidden" name="_method" value="delete">
+	<div>
+		<label>Participant's Full Name:</label>
+		<input type="text" name="participants[fullname]" value="<%= @participants.fullname%>" disabled>
+	</div>
+	<div>
+		<label>Participant's Email:</label>
+		<input type="text" name="participants[email]" value="<%= @participants.email%>" disabled>
+	</div>
+	<input type="submit" value="Delete">
+</form>

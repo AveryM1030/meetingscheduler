@@ -1,0 +1,18 @@
+<h1>Create Participant</h1>
+<form action="/participants" method="post">
+	<div class="form-group">
+		<label>Participant's Full Name:</label>
+		<input type="text" name="participants[fullname]" class="form-control">
+	</div>
+	<div class="form-group">
+		<label>Participant's Email:</label>
+		<input type="text" name="participants[email]" class="form-control">
+	</div>
+	<input type="submit" value="Create" class="btn btn-primary">
+</form>
+<% if flash[:errors] %>
+	<% flash[:errors].each do |e| %>
+	<div class="alert alert-danger"><%= e %></div>
+	<% end %>
+<% end %>
+	
