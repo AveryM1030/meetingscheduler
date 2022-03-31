@@ -31,7 +31,7 @@ class HostsController < ApplicationController
 			# get full message associated with errors
 			# store them in a Rails flash object names errirs so that 
 			# the full messages may be displayed in the hosts new.html.erb
-			flash[:errors] = host.errors.full_messages
+			flash[:errors] = hosts.errors.full_messages
 			# if the save method fails, request the hosts/new URL
 			# which will rendor the hosts new.html.erb in the browser
 			redirect_to "/hosts/new"
