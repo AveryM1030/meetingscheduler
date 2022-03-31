@@ -23,7 +23,7 @@ class HostsController < ApplicationController
 		# call save method on Host object
 		# save method inserts the data in the Host model object
 		# into the host table
-		if host.save
+		if hosts.save
 			# if the save method succeeds, request the hosts URL
 			# which will rendor the host index.html.erb in the browser
 			redirect_to "/hosts"
@@ -31,7 +31,7 @@ class HostsController < ApplicationController
 			# get full message associated with errors
 			# store them in a Rails flash object names errirs so that 
 			# the full messages may be displayed in the hosts new.html.erb
-			flash[:errors] = host.errors.full_messages
+			flash[:errors] = hosts.errors.full_messages
 			# if the save method fails, request the hosts/new URL
 			# which will rendor the hosts new.html.erb in the browser
 			redirect_to "/hosts/new"
@@ -105,7 +105,7 @@ end
 	def host_params
 		# params is a Rails onject that gets the specified request
 		# paramters
-		params.require(:host).permit(:first_name, :last_name, :email_address)
+		params.require(:host).permit(:fullname, :email)
 	end
 end
 

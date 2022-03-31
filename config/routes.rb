@@ -16,6 +16,7 @@ get "hosts/:id/edit" => "hosts#edit"
 post "hosts/:id" => "hosts#update"
 get "hosts/:id/delete" => "hosts#delete"
 delete "hosts/:id" => "hosts#destroy"
+<<<<<<< HEAD
 get "meetings" => "meetings#index"
 get "meetings/new" => "meetings#new"
 post "meetings" => "meetings#create"
@@ -30,4 +31,6 @@ get "participants/:id/edit" => "participants#edit"
 post "participants/:id" => "participants#update"
 get "participants/:id/delete" => "participants#delete"
 delete "participants/:id" => "participants#destroy"
+=======
+>>>>>>> a1d73e9f32bd0db3f80fd3420999b2e140bd1a11
 end

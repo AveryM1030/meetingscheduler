@@ -1,13 +1,13 @@
-<h1>Delete <%= @host.first_name%> <%= @host.last_name%> <%= @host.email_address%></h1>
-<form action="/hosts/<%= @host.id%>" method="post">
+<h1>Delete <%= @hosts.fullname%>  <%= @hosts.email%></h1>
+<form action="/hosts/<%= @hosts.id%>" method="post">
 	<input type="hidden" name="_method" value="delete">
 	<div>
 		<label>FullName:</label>
-		<input type="text" name="host[FullName]" value="<%= @host.fullname%>" disabled>
+		<input type="text" name="host[fullname]" value="<%= @hosts.fullname%>" disabled>
 	</div>
 	<div>
 		<label>Email:</label>
-		<input type="text" name="host[email_address]" value="<%= @host.email_address%>" disabled>
+		<input type="text" name="host[email]" value="<%= @hosts.email%>" disabled>
 	</div>
 	<input type="submit" value="Delete">
 </form>
