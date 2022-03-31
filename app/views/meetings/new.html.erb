@@ -1,0 +1,22 @@
+<h1>Create Meeting</h1>
+<form action="/meetings" method="post">
+	<div class="form-group">
+		<label>Meeting's Name:</label>
+		<input type="text" name="meetings[name]" class="form-control">
+	</div>
+	<div class="form-group">
+		<label>Meeting's Location:</label>
+		<input type="text" name="meetings[location]" class="form-control">
+	</div>
+	<div class="form-group">
+		<label>Meeting's Date:</label>
+		<input type="text" name="meetings[date]" class="form-control">
+	</div>
+	<input type="submit" value="Create" class="btn btn-primary">
+</form>
+<% if flash[:errors] %>
+	<% flash[:errors].each do |e| %>
+	<div class="alert alert-danger"><%= e %></div>
+	<% end %>
+<% end %>
+	

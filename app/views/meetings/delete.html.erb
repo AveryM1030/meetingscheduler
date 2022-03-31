@@ -1,0 +1,17 @@
+<h1>Delete <%= @meetings.name %> <%= @meetings.location %><%= @meetings.date %></h1>
+<form action="/meetings/<%= @meetings.id %>" method="post">
+	<input type="hidden" name="_method" value="delete">
+	<div>
+		<label>Meeting's Name:</label>
+		<input type="text" name="meetings[name]" value="<%= @meetings.name%>" disabled>
+	</div>
+	<div>
+		<label>Meeting's Location:</label>
+		<input type="text" name="meetings[location]" value="<%= @meetings.location%>" disabled>
+	</div>
+	<div>
+		<label>Last Date:</label>
+		<input type="text" name="meetings[date]" value="<%= @meetings.date%>" disabled>
+	</div>
+	<input type="submit" value="Delete">
+</form>

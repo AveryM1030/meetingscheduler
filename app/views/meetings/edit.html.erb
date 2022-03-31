@@ -1,0 +1,21 @@
+<h1>Edit <%= @meetings.name %></h1>
+<form action="/meetings/<%= @meetings.id %>" method="post">
+	<div>
+		<label>Meeting's Name:</label>
+		<input type="text" name="meetings[name]" value="<%= @meetings.name%>">
+	</div>
+	<div>
+		<label>Meeting's Location:</label>
+		<input type="text" name="meetings[location]" value="<%= @meetings.location%>">
+	</div>
+	<div>
+		<label>Meeting's Date:</label>
+		<input type="text" name="meetings[date]" value="<%= @meetings.date%>">
+	</div>
+	<input type="submit" value="Update">
+</form>
+<% if flash[:errors] %>
+	<% flash[:errors].each do |e| %>
+	<div><%= e %></div>
+	<% end %>
+<% end %>
