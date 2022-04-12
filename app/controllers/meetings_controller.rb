@@ -50,8 +50,7 @@ class MeetingsController < ApplicationController
 			#store them in a Rails flash, object named errors so that 
 			# the full messages may be displayed in the requested URl
 			flash[:errors] = meetings.errors.full_messages
-			redirect_to "/meetings/#{meeting.id}/edit"
-			# request the meetings/:id/edit URl which will render the meetings
+			redirect_to "/meetings/#{meetings.id}/edit"
 			# edit.html.erb
 		end
 	end

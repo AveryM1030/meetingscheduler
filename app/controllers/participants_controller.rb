@@ -60,7 +60,7 @@ class ParticipantsController < ApplicationController
 			#store them in a Rails flash, object named errors so that 
 			# the full messages may be displayed in the requested URl
 			flash[:errors] = participants.errors.full_messages
-			redirect_to "/participants/#{participant.id}/edit"
+			redirect_to "/participants/#{participants.id}/edit"
 			# request the actors/:id/edit URl which will render the actors
 			# edit.html.erb
 		end

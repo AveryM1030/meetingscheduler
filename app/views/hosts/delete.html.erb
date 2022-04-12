@@ -1,8 +1,9 @@
-<h1>Delete <%= @hosts.fullname%>  <%= @hosts.email%></h1>
+<h1>Delete <%= @hosts.fullname%></h1>
 <form action="/hosts/<%= @hosts.id%>" method="post">
 	<input type="hidden" name="_method" value="delete">
 	<div>
-		<label>FullName:</label>
+
+		<label>Full Name:</label>
 		<input type="text" name="host[fullname]" value="<%= @hosts.fullname%>" disabled class="form-control">
 	</div>
 	<div>
