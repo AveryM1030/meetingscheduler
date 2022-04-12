@@ -4,32 +4,32 @@ class ParticipantsController < ApplicationController
 	end
 
 	def create
-		# call constructor of Host model class giving it the 
-		# first name, last name, and email paramters input in the hosts
+		# call constructor of Participant model class giving it the 
+		# fullname and email paramters input in the hosts
 		# new.html.erb
-		# constructo create Host model object which is stored
+		# constructo create Participant model object which is stored
 		# in variable
 		participants = Participant.new(participant_params)
-		# call save method on Host object
-		# save method inserts the data in the Host model object
+		# call save method on Participant object
+		# save method inserts the data in the Participant model object
 		# into the host table
 		if participants.save
-			# if the save method succeeds, request the hosts URL
-			# which will rendor the host index.html.erb in the browser
+			# if the save method succeeds, request the participant URL
+			# which will rendor the participant index.html.erb in the browser
 			redirect_to "/participants"
 		else
 			# get full message associated with errors
 			# store them in a Rails flash object names errirs so that 
-			# the full messages may be displayed in the hosts new.html.erb
+			# the full messages may be displayed in the participants new.html.erb
 			flash[:errors] = participants.errors.full_messages
-			# if the save method fails, request the hosts/new URL
-			# which will rendor the hosts new.html.erb in the browser
+			# if the save method fails, request the participants/new URL
+			# which will rendor the participants new.html.erb in the browser
 			redirect_to "/participants/new"
 		end
 	end
 
 	def edit
-		# call find method on Actor model class giving it the id sent
+		# call find method on Participant model class giving it the id sent
 		# in the request
 		# the find method selects all of the data in the actor table where
 		# the id is equal to the id sent in the request
@@ -40,14 +40,14 @@ class ParticipantsController < ApplicationController
 	end
 
 	def update
-		# call find method on Actor model class giving it the id sent in the 
+		# call find method on Participant model class giving it the id sent in the 
 		# request
 		# find method selects all of the data in the actor table where
 		# the id is qual to the id sent in the request
 		# the selected data will be returned as an object
 		# the object will be stroed in a variable
 		participants = Participant.find(params[:id])
-		# call updated method on Actor object giving it the first name and
+		# call updated method on Participant object giving it the first name and
 		# last name paramerters imput in the actors edit.html.erb
 		# update method updates the data in the actor table use the parameters
 		if participants.update(participant_params)
