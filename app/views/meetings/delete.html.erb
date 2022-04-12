@@ -1,4 +1,4 @@
-<h1>Delete <%= @meetings.name %> <%= @meetings.location %><%= @meetings.date %></h1>
+<h1>Delete <%= @meetings.name %></h1>
 <form action="/meetings/<%= @meetings.id %>" method="post">
 	<input type="hidden" name="_method" value="delete">
 	<div>

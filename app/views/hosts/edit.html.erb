@@ -1,7 +1,7 @@
-<h1>Edit <%= @hosts.fullname%> <%= @hosts.email%></h1>
+<h1>Edit <%= @hosts.fullname%></h1>
 <form action="/hosts/<%= @hosts.id%>" method="post">
 	<div>
-		<label>FullName:</label>
+		<label>Full Name:</label>
 		<input type="text" name="host[fullname]" value="<%= @hosts.fullname%>">
 	</div>
 	<div>
