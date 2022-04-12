@@ -5,44 +5,44 @@ class MeetingsController < ApplicationController
 	end
 
 	def create
-		# call constructor of Host model class giving it the 
+		# call constructor of Meeting model class giving it the 
 		# first name, last name, and email paramters input in the hosts
 		# new.html.erb
-		# constructo create Host model object which is stored
+		# constructo create Meeting model object which is stored
 		# in variable
 		meetings = Meeting.new(meeting_params)
-		# call save method on Host object
-		# save method inserts the data in the Host model object
+		# call save method on Meeting object
+		# save method inserts the data in the Meeting model object
 		# into the host table
 		if meetings.save
-			# if the save method succeeds, request the hosts URL
+			# if the save method succeeds, request the meetings URL
 			# which will rendor the host index.html.erb in the browser
 			redirect_to "/meetings"
 		else
 			# get full message associated with errors
-			# store them in a Rails flash object names errirs so that 
-			# the full messages may be displayed in the hosts new.html.erb
+			# store them in a Rails flash object names errors so that 
+			# the full messages may be displayed in the meetings new.html.erb
 			flash[:errors] = meetings.errors.full_messages
-			# if the save method fails, request the hosts/new URL
-			# which will rendor the hosts new.html.erb in the browser
+			# if the save method fails, request the meetings/new URL
+			# which will rendor the meetings new.html.erb in the browser
 			redirect_to "/meetings/new"
 		end
 	end
 
 	def update
-		# call find method on Actor model class giving it the id sent in the 
+		# call find method on Meeting model class giving it the id sent in the 
 		# request
-		# find method selects all of the data in the actor table where
-		# the id is qual to the id sent in the request
+		# find method selects all of the data in the meeting table where
+		# the id is equal to the id sent in the request
 		# the selected data will be returned as an object
 		# the object will be stroed in a variable
 		meetings = Meeting.find(params[:id])
-		# call updated method on Actor object giving it the first name and
-		# last name paramerters imput in the actors edit.html.erb
+		# call updated method on Meeting object giving it the name, location
+		# and date paramerters imput in the meetings edit.html.erb
 		# update method updates the data in the actor table use the parameters
 		if meetings.update(meeting_params)
-			# if the update method succeeds, request the actors URL which
-			# will render the actors index.html.erb in the broswer
+			# if the update method succeeds, request the meetings URL which
+			# will render the meetings index.html.erb in the broswer
 			redirect_to "/meetings"
 		else
 			# if the updated method fails, get the full messages associated
@@ -50,16 +50,15 @@ class MeetingsController < ApplicationController
 			#store them in a Rails flash, object named errors so that 
 			# the full messages may be displayed in the requested URl
 			flash[:errors] = meetings.errors.full_messages
-			redirect_to "/meetings/#{meeting.id}/edit"
-			# request the actors/:id/edit URl which will render the actors
+			redirect_to "/meetings/#{meetings.id}/edit"
 			# edit.html.erb
 		end
 	end
 
 	def edit
-		# call find method on Actor model class giving it the id sent
+		# call find method on Meeting model class giving it the id sent
 		# in the request
-		# the find method selects all of the data in the actor table where
+		# the find method selects all of the data in the meeting table where
 		# the id is equal to the id sent in the request
 		# the selected data will be returned as an object
 		# the object will be stored in an instance variable that will be
@@ -68,9 +67,9 @@ class MeetingsController < ApplicationController
 	end
 
 	def delete
-		# call find method on Actor model class giving it the id sent
+		# call find method on Meeting model class giving it the id sent
 		# in the request
-		# the find method selects all of the data in the actor table where
+		# the find method selects all of the data in the meeting table where
 		# the id is equal to the id sent in the request
 		# the selected data will be returned as an object
 		# the object will be stored in an instance variable that will be
