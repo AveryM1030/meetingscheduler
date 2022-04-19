@@ -30,4 +30,6 @@ get "participants/:id/edit" => "participants#edit"
 post "participants/:id" => "participants#update"
 get "participants/:id/delete" => "participants#delete"
 delete "participants/:id" => "participants#destroy"
+get "appearance" => "appearance#index"
+post "appearance" => "appearance#create"
 end

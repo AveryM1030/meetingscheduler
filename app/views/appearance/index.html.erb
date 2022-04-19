@@ -1,0 +1,27 @@
+<h1>Select Host to a Meeting</h1>
+<form action="/appearance" method="post">
+	<div>
+		<label>Meeting:</label>
+		<select name="appearance[meeting_id]">
+			<option></option>
+			<% @meetings.each do |meeting| %>
+			<option value="<%= meeting.id %>"><%= meeting.name %></option>
+			<% end %>
+		</select>
+	</div>
+	<div>
+		<label>Host:</label>
+		<select name="appearance[host_id]">
+			<option></option>
+			<% @hosts.each do |host| %>
+			<option value="<%= host.id %>"><%= host.fullname %></option>
+			<% end %>
+		</select>
+	</div>
+	<input type="submit" value="Create">
+</form>
+<% if flash[:errors] %>
+	<% flash[:errors].each do |e| %>
+	<div><%= e %></div>
+	<% end %>
+<% end %>
