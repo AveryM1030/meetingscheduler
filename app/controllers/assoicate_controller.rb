@@ -1,4 +1,5 @@
-class AssoicateController < ApplicationController# index method gets called when the assoicates URL is requested
+class AssoicateController < ApplicationController
+	# index method gets called when the assoicates URL is requested
 	# index method is mapped to the assoicate index.html.erb
 	def index
 		# call all method on Meeting model class.
@@ -39,7 +40,7 @@ class AssoicateController < ApplicationController# index method gets called when
 			flash[:errors] = Associate.errors.full_messages
 			# if the save method fails, request the Associate/new URL
 			# which will rendor the Associate index.html.erb in the browser
-			redirect_to "/associate/index"
+			redirect_to "/associates/index"
 		end
 	end
 

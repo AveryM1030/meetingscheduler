@@ -1,12 +1,12 @@
 class HostsController < ApplicationController
-	# index method gets called when the actors URL is requested.
-	# index method gets mapped to the actors index.html.erb.
+	# index method gets called when the hosts URL is requested.
+	# index method gets mapped to the hosts index.html.erb.
 	def index
 		# call all method on Host model class.
 		# all method selects all of the data in the host table
 		# and returns the data as an array of objects.
 		# store the array of objects in an instance variable.
-		# instance varialbe is avaliable to actors index.html.erb.
+		# instance varialbe is avaliable to hosts index.html.erb.
 		@hosts = Host.all
 	end
 
@@ -15,7 +15,7 @@ class HostsController < ApplicationController
 	# the actors new.hthml.erb.
 	def create
 		# call constructor of Host model class giving it the 
-		# first name, last name, and email paramters input in the hosts
+		# fullname, and email paramters input in the hosts
 		# new.html.erb
 		# constructo create Host model object which is stored
 		# in variable
