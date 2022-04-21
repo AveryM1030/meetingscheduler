@@ -25,7 +25,7 @@ class AssoicateController < ApplicationController
 		# new.html.erb
 		# constructor create Assoicates model object which is stored
 		# in variable
-		assoicate = Associate.new(Associate_params)
+		assoicate = Associate.new(associate_params)
 		# call save method on Associate object
 		# save method inserts the data in the Associate model object
 		# into the Associate table
@@ -50,6 +50,4 @@ class AssoicateController < ApplicationController
 		# paramters
 		params.require(:assoicate).permit(:meeting_id, :participant_id)
 	end
-end
-
 end
