@@ -1,0 +1,2 @@
+module AssoicateHelper
+end

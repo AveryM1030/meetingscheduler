@@ -1,4 +1,4 @@
-<h1>View <%= pluralize(@hosts.count, "Host") %></h1>
+<h1> <%= pluralize(@hosts.count, "Host") %></h1>
 <table class="table table-striped">
 	<thead>
 		<th scope="col">Full Name</th>
@@ -17,4 +17,3 @@
 		<% end %>
 	</tbody>
 </table>
-<a href="/hosts/new">Create Host</a>

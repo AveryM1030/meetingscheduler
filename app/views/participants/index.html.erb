@@ -1,4 +1,4 @@
-<h1>View <%= pluralize(@participants.count, "Participant") %></h1>
+<h1> <%= pluralize(@participants.count, "Participant") %></h1>
 <table class="table table-striped">
 	<thead>
 		<th scope="col">Participant's Full Name</th>
@@ -17,4 +17,3 @@
 		<% end %>
 	</tbody>
 </table>
-<a href="/participants/new">Create Participant</a>
