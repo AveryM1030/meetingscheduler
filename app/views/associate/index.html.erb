@@ -4,7 +4,7 @@
 		<label>Meeting:</label>
 		<select name="assoicate[meeting_id]">
 			<option></option>
-			<% @meeting.each do |meeting| %>
+			<% @meetings.each do |meeting| %>
 			<option value="<%= meeting.id %>"><%= meeting.name%></option>
 			<% end %>
 		</select>
@@ -13,7 +13,7 @@
 		<label>Participant:</label>
 		<select name="assoicate[participants_id]">
 			<option></option>
-			<% @participant.each do |participant| %>
+			<% @participants.each do |participant| %>
 			<option value="<%= participant.id %>"><%= participant.fullname%></option>
 			<% end %>
 		</select>
