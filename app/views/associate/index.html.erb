@@ -1,20 +1,20 @@
-<h1>Select Participants to Meeting</h1>
-<form action="/assoicate" method="post">
+<h1>Create Associate</h1>
+<form action="/associate" method="post">
 	<div>
-		<label>Meeting:</label>
-		<select name="assoicate[meeting_id]">
+		<label>Participants:</label>
+		<select name="associate[participant_id]">
 			<option></option>
-			<% @meetings.each do |meeting| %>
-			<option value="<%= meeting.id %>"><%= meeting.name%></option>
+			<% @participants.each do |participant| %>
+			<option value="<%= participant.id %>"><%= participant.fullname%></option>
 			<% end %>
 		</select>
 	</div>
 	<div>
-		<label>Participant:</label>
-		<select name="assoicate[participants_id]">
+		<label>Meeting:</label>
+		<select name="associate[meeting_id]">
 			<option></option>
-			<% @participants.each do |participant| %>
-			<option value="<%= participant.id %>"><%= participant.fullname%></option>
+			<% @meetings.each do |meeting| %>
+			<option value="<%= meeting.id %>"><%= meeting.location%></option>
 			<% end %>
 		</select>
 	</div>

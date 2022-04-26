@@ -30,7 +30,7 @@ get "participants/:id/edit" => "participants#edit"
 post "participants/:id" => "participants#update"
 get "participants/:id/delete" => "participants#delete"
 delete "participants/:id" => "participants#destroy"
-get "associates" => "associates#index"
-post "associates" => "associates#create"
+get "associate" => "associate#index"
+post "associate" => "associate#create"
 end
 
