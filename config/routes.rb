@@ -34,4 +34,8 @@ get "appearance" => "appearance#index"
 post "appearance" => "appearance#create"
 get "meetings/:id" => "meetings#show"
 post "meetings/:id" => "meetings#show"
+get "associate" => "associate#index"
+post "associate" => "associate#create"
+get "associate/:id" => "associate#show"
 end
+
