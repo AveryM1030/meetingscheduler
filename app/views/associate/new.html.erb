@@ -1,0 +1,19 @@
+<h1> <%= pluralize(@assoicates.count, "Associate") %></h1>
+<table class="table table-striped">
+	<thead>
+		<th scope="col">Full Name</th>
+		<th scope="col">Location</th>
+	</thead>
+	<tbody>
+		<% @associate.each do |assoicate| %>
+		<tr>
+			<td><%= associate.fullname %></td>
+			<td><%= associate.Location %></td>
+			<td>
+				<a href="/associate/<%= assoicate.id %>/edit">Edit</a> |
+				<a href="/associate/<%= assoicate.id %>/delete">Delete</a>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
