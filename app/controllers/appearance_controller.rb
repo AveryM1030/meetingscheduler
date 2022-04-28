@@ -23,10 +23,10 @@ class AppearanceController < ApplicationController
 			# get full messages associated with errors
 			# store them in a Rails flash object named errors so that
 			# the full messages may be displayed in the appearances index.html.erb
-			flash[:errors] = appearances.errors.full_messages
+			flash[:errors] = appearance.errors.full_messages
 			# if the save method fails, request the appearances/new URL
 			# which will rendor the apearances new.html.erb in the browser
-			redirect_to "/appearance/index"
+			redirect_to "/appearance"
 		end
 	end
 

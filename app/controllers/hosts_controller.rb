@@ -125,7 +125,7 @@ end
 		# selected data will be reutrned in an array of movie objects 
 		# store the array of movie objects in an instance variable 
 		# instance variable is available to actors show.html.erb
-		@hosts = Meeting.find(params[:id]).host
+		@meetings = Host.find(params[:id]).meetings
 	end 
 
 	private

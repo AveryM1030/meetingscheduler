@@ -1,5 +1,9 @@
 <h1> The Meeting Has <%= pluralize(@hosts.count, "Host") %></h1>
-<table>
+<table class="table table-striped">
+	<thead>
+		<th scope="col">Host's Full Name</th>
+		<th scope="col">Host's Email</th>
+	</thead>
 	<tbody>
 		<% @hosts.each do |host| %>
 		<tr>
@@ -9,4 +13,3 @@
 		<% end %>
 	</tbody>
 </table>
-<a href="/meetings">View Meeting</a>
