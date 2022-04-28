@@ -33,5 +33,5 @@ delete "participants/:id" => "participants#destroy"
 get "associate" => "associate#index"
 post "associate" => "associate#create"
 get "meetings/:id" => "meetings#show"
-get "participants/:id" => "participants#show"
+post "meetings/:id" => "meetings#show"
 end
