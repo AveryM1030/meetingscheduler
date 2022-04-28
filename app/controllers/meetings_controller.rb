@@ -29,6 +29,20 @@ class MeetingsController < ApplicationController
 		end
 	end
 
+		# show method gets called when the meetings/:id URL is requested
+		# show method is mapped to the meetings show.html.erb
+	def show
+		# call find method on Meeting model class giving it the id sent
+		# in the request
+		# find method selects all of the data in the movie table where
+		# the id is equal to the id sent in the request
+		# selected data will be returned in a array of actor object
+		# store the array of actor objects in a instance variable
+		# instance variable is available to meetings show.html.erb
+		@participants = Meeting.find(params[:id]).participants
+	end
+
+
 	def update
 		# call find method on Meeting model class giving it the id sent in the 
 		# request
