@@ -39,6 +39,19 @@ class ParticipantsController < ApplicationController
 		@participants = Participant.find(params[:id])
 	end
 
+		# show method gets called when the participant/:id URL is requested
+		# show method is mapped to the participant show.html.erb
+	def show
+		# call find method on Participant model class giving it the id sent
+		# in the request
+		# find method selects all of the data in the participant table where
+		# the id is equal to the id sent in the request
+		# selected data will be returned in a array of meeting object
+		# store the array of meeting objects in a instance variable
+		# instance variable is available to participant show.html.erb
+		@meetings = Participant.find(params[:id]).meetings
+	end
+
 	def update
 		# call find method on Participant model class giving it the id sent in the 
 		# request

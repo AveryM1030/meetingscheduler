@@ -36,6 +36,6 @@ get "meetings/:id" => "meetings#show"
 post "meetings/:id" => "meetings#show"
 get "associate" => "associate#index"
 post "associate" => "associate#create"
-get "associate/:id" => "associate#show"
+get "meetings/:id" => "meetings#show"
+post "meetings/:id" => "meetings#show"
 end
-
