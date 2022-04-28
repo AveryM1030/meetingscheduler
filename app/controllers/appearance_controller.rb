@@ -11,11 +11,11 @@ class AppearanceController < ApplicationController
 		# index.html.erb
 		# constrctor creates Appearances model object which is stroed
 		# in variable
-		appearances = Appearance.new(appearance_params)
+		appearance = Appearance.new(appearance_params)
 		# call save method on Appearance object
 		# save method inserts the data in the Appearance model object
 		# into the actor table
-		if appearances.save
+		if appearance.save
 			# if the save method succeeds, request the appearances URL
 			# which will rendor the actors index.html.erb in the browser
 			redirect_to "/meetings"

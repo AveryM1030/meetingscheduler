@@ -32,4 +32,6 @@ get "participants/:id/delete" => "participants#delete"
 delete "participants/:id" => "participants#destroy"
 get "appearance" => "appearance#index"
 post "appearance" => "appearance#create"
+get "meetings/:id" => "meetings#show"
+post "meetings/:id" => "meetings#show"
 end

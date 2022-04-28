@@ -79,6 +79,22 @@ end
 			redirect_to "/hosts/#{host.id}/edit"
 		end
 	end
+	# show method gets called when the movies/:id URL is requested 
+	# show method is mappled to the movies show.html.erb
+	def show
+		# call find method on Movies model class giving it the id sent
+		# in the request
+		# find method selects all of the data in the movie table where
+		# the id is equal to the id sent in the request 
+		# selected data will be reutrned in an array of movie objects 
+		# store the array of movie objects in an instance variable 
+		# instance variable is available to movies show.html.erb
+		@meetings = Host.find(params[:id]).meetings
+	end 
+
+	def edit
+		@hosts = Host.find(params[:id])
+	end
 
 	# delete method gets called when the hosts/:id/delete URL is requested
 	# delete method is mapped to the hosts delete.html.erb
@@ -100,6 +116,17 @@ end
 		host.destroy
 		redirect_to "/hosts"
 	end
+
+	def show
+		# call find method on Actor model class giving it the id sent
+		# in the request
+		# find method selects all of the data in the actor table where
+		# the id is equal to the id sent in the request 
+		# selected data will be reutrned in an array of movie objects 
+		# store the array of movie objects in an instance variable 
+		# instance variable is available to actors show.html.erb
+		@hosts = Meeting.find(params[:id]).host
+	end 
 
 	private
 	def host_params

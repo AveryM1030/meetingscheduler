@@ -83,6 +83,17 @@ class MeetingsController < ApplicationController
 		redirect_to "/meetings"
 	end
 
+	def show
+		# call find method on Actor model class giving it the id sent
+		# in the request
+		# find method selects all of the data in the actor table where
+		# the id is equal to the id sent in the request 
+		# selected data will be reutrned in an array of movie objects 
+		# store the array of movie objects in an instance variable 
+		# instance variable is available to actors show.html.erb
+		@hosts = Meeting.find(params[:id]).hosts
+	end 
+
 	private 
 	def meeting_params
 		# params is a Rails object that gets the specified request
