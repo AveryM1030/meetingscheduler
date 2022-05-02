@@ -30,18 +30,9 @@ get "participants/:id/edit" => "participants#edit"
 post "participants/:id" => "participants#update"
 get "participants/:id/delete" => "participants#delete"
 delete "participants/:id" => "participants#destroy"
-get "appearance" => "appearance#index"
-post "appearance" => "appearance#create"
-get "meetings/:id" => "meetings#show"
-post "meetings/:id" => "meetings#show"
-
-
 get "associate" => "associate#index"
 post "associate" => "associate#create"
-get "participants/:id" => "participants#show"
-post "participants/:id" => "participants#show"
-
-
-get "hosts/:id/meetings" => "hosts#show"
-post "hosts/:id/meetings" => "hosts#show"
+get "meetings/:id" => "meetings#show"
+post "meetings/:id" => "meetings#show"
+get "participants/id:" => "participants#show"
 end

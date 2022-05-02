@@ -1,0 +1,15 @@
+<h1> The Participants Has <%= pluralize(@participants.count, "Participant") %></h1>
+<table class="table table-striped">
+	<thead>
+		<th scope="col">Participant's Full Name</th>
+		<th scope="col">Participant's Email</th>
+	</thead>
+	<tbody>
+		<% @participants.each do |participant| %>
+		<tr>
+			<td><%= participant.fullname %></td>
+			<td><%= participant.location %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
