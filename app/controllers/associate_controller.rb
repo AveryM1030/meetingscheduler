@@ -44,6 +44,17 @@ class AssociateController < ApplicationController
 		end
 	end
 
+	def show
+		# call find method on Participant model class giving it the id sent
+		# in the request
+		# find method selects all of the data in the participant table where
+		# the id is equal to the id sent in the request
+		# selected data will be returned in a array of meeting object
+		# store the array of meeting objects in a instance variable
+		# instance variable is available to participant show.html.erb
+		@participants = Meeting.find(params[:id]).participants
+	end
+
 	private
 	def associate_params
 		# params is a Rails onject that gets the specified request
