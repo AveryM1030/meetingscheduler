@@ -26,7 +26,7 @@ class AppearanceController < ApplicationController
 			flash[:errors] = appearance.errors.full_messages
 			# if the save method fails, request the appearances/new URL
 			# which will rendor the apearances new.html.erb in the browser
-			redirect_to "/appearance"
+			redirect_to "/appearance/index"
 		end
 	end
 

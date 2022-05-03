@@ -31,7 +31,7 @@ class MeetingsController < ApplicationController
 
 		# show method gets called when the meetings/:id URL is requested
 		# show method is mapped to the meetings show.html.erb
-	def show
+	def showOne
 		# call find method on Meeting model class giving it the id sent
 		# in the request
 		# find method selects all of the data in the movie table where

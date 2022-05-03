@@ -32,10 +32,17 @@ post "participants/:id" => "participants#update"
 get "participants/:id/delete" => "participants#delete"
 delete "participants/:id" => "participants#destroy"
 get "appearance" => "appearance#index"
+post "appearance" => "appearance#index"
 get "associate" => "associate#index"
 post "associate" => "associate#create"
 get "meetings/:id" => "meetings#show"
 post "meetings/:id" => "meetings#show"
+
+get "associate/:id" => "associate#index"
+post "associate/:id" => "associate#index"
+
+get "meetings/:id" => "meetings#showOne"
+post "meetings/:id" => "meetings#showOne"
 
 
 get "participants/id:" => "participants#show"
