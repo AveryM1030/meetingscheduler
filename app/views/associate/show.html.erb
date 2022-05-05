@@ -2,13 +2,13 @@
 <table class="table table-striped">
 	<thead>
 		<th scope="col">Participant's Full Name</th>
-		<th scope="col">Participant's Location</th>
+		<th scope="col">Participant's Email</th>
 	</thead>
 	<tbody>
 		<% @participants.each do |participant| %>
 		<tr>
 			<td><%= participant.fullname %></td>
-			<td><%= participant.location %></td>
+			<td><%= participant.email %></td>
 		</tr>
 		<% end %>
 	</tbody>

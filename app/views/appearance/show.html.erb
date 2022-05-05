@@ -1,0 +1,15 @@
+<h1> The Meeting Has <%= pluralize(@hosts.count, "Host") %></h1>
+<table class="table table-striped">
+	<thead>
+		<th scope="col">Host's Full Name</th>
+		<th scope="col">Host's Email</th>
+	</thead>
+	<tbody>
+		<% @hosts.each do |host| %>
+		<tr>
+			<td><%= host.fullname %></td>
+			<td><%= host.email %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
