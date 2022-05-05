@@ -1,11 +1,12 @@
 <h1>Respond to a meeting</h1>
-<form action="/associate" method="post">
+<form action="participants/:id/respond" method="post">
 	<div>
-		<label>Participants:</label>
-		<select name="associate[participant_id]">
+		<label>Respond:</label>
+		<select name="associate[respond]">
 			<option></option>
-			<% @participants.each do |participant| %>
-			<option value="<%= participant.id %>"><%= participant.fullname%></option>
+			<option value="Yes>"></option>
+			<option value="No>"></option>
+			<option value="Maybe>"></option>
 			<% end %>
 		</select>
 	</div>
