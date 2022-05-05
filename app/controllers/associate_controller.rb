@@ -55,6 +55,9 @@ class AssociateController < ApplicationController
 		@participants = Meeting.find(params[:id]).participants
 	end
 
+	def respond
+	end
+
 	private
 	def associate_params
 		# params is a Rails onject that gets the specified request

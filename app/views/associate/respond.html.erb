@@ -1,0 +1,27 @@
+<h1>Respond to a meeting</h1>
+<form action="/associate" method="post">
+	<div>
+		<label>Participants:</label>
+		<select name="associate[participant_id]">
+			<option></option>
+			<% @participants.each do |participant| %>
+			<option value="<%= participant.id %>"><%= participant.fullname%></option>
+			<% end %>
+		</select>
+	</div>
+	<div>
+		<label>Meeting:</label>
+		<select name="associate[meeting_id]">
+			<option></option>
+			<% @meetings.each do |meeting| %>
+			<option value="<%= meeting.id %>"><%= meeting.location%></option>
+			<% end %>
+		</select>
+	</div>
+	<input type="submit" value="Add">
+</form>
+<% if flash[:errors] %>
+	<% flash[:errors].each do |e| %>
+	<div><%= e %></div>
+	<% end %>
+<% end %>
