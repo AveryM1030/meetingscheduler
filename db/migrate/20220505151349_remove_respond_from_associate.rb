@@ -1,0 +1,5 @@
+class RemoveRespondFromAssociate < ActiveRecord::Migration[7.0]
+  def change
+    remove_column :associates, :respond, :string
+  end
+end

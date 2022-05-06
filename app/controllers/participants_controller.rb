@@ -96,6 +96,11 @@ class ParticipantsController < ApplicationController
 		redirect_to "/participants"
 	end
 
+
+	def respond
+		participants = Participant.find(params[:id])
+	end
+
 	private 
 	def participant_params
 		# params is a Rails object that gets the specified request

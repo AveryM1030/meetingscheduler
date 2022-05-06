@@ -14,7 +14,7 @@
 		<select name="associate[meeting_id]">
 			<option></option>
 			<% @meetings.each do |meeting| %>
-			<option value="<%= meeting.id %>"><%= meeting.location%></option>
+			<option value="<%= meeting.id %>"><%= meeting.name%></option>
 			<% end %>
 		</select>
 	</div>

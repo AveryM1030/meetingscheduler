@@ -1,0 +1,18 @@
+<h1>Respond to a Meeting </h1>
+<form action="/participants/:id/respond" method="post">
+	<div>
+		<label>Respond:</label>
+		<select name="participants[respond]">
+  			<option></option>
+  			<option>Yes</option>
+  			<option>No</option>
+ 			<option>Maybe</option>
+		</select>
+	</div>
+	<input type="submit" value="Add">
+</form>
+<% if flash[:errors] %>
+	<% flash[:errors].each do |e| %>
+	<div><%= e %></div>
+	<% end %>
+<% end %>

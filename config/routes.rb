@@ -39,6 +39,7 @@ get "meetings/:id" => "meetings#show"
 post "meetings/:id" => "meetings#show"
 get "participants/:id/meetings" => "associate#show"
 get "host/:id/meetings" => "appearance#show"
-get "participants/:id/respond" => "associate#respond"
+get "participants/:id/respond" => "participants#respond"
+post "participants/:id/respond" => "participants#respond"
 
 end
